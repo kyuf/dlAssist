@@ -51,7 +51,7 @@ authorization error, it will prompt the user for login credentials to the site.
     Enter username:
     Enter password:
 
-The user will continue to be prompted until the credentials succeed.
+Password input will not be echoed as it is being entered. The user will continue to be prompted until the correct credentials are entered.
 
 When a file is about to be overwritten, a confirmation message will appear.
 

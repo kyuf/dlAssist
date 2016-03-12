@@ -11,6 +11,7 @@ import requests
 from urllib.parse import urlparse
 import bs4
 import os
+import getpass
 
 #prompt input of url and file type
 url = input('Enter site url: ')
@@ -50,7 +51,7 @@ for tag in tags:
         while req.status_code == 401:
             print('Authorization required')
             username = input('Enter username: ')
-            password = input('Enter password: ')
+            password = getpass.getpass('Enter password: ')
             req = requests.get(fileURL, auth=(username, password))
 
         #set file name and path
