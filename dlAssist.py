@@ -43,7 +43,7 @@ username, password = None, None
 #print out all tags of selected file type
 for tag in tags:
     link = tag.get('href', None)
-    if link.split('.')[-1] == fileType:
+    if link != None and link.split('.')[-1] == fileType:
         fileURL = url + link
         req = requests.get(fileURL, auth=(username, password))
         #prompt for username/password input if authorization required
